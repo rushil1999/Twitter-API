@@ -38,12 +38,19 @@ def getParameters(request):
 
 	#return HttpResponse(status=200)
 
-
+	
 
 	return render(request, 'tweets/show.html', x)
+
 
 	#Oaa8AFy1BrFEpN217EmtNhj8D
 	#fDGc7WPcSwRQgRHCNbyA59fxk7ic9JNJpCK1c3ATg1fIyu6FJW
 
 	#1299337287268851717-J09ZEtegD2OQT7KL2RDuiVyQXUvXdM
 	#2hJQytIPH0tB4ArFqIL1MzaxTjbwEm0VO3mUTx8c9Xgly
+
+	# Hello
+	# 	{{x}}
+	# 	<ul>
+	# 	{% for key,value in x.items %}{{value}}{% endfor %}
+	# 	</ul> 
