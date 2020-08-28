@@ -5,12 +5,15 @@ from django.http import HttpResponse
 from .models import Tweet
 
 
+
 def getParameters(request):
 	text = request.GET['hashtag']
 	num = request.GET['limit']
 	print(text)
 	print(num)
-	
+
+	x = {}
+	count =0 
 	# 
 	# return render(request, './templates/tweets/show.html', tweet)
 
@@ -27,10 +30,17 @@ def getParameters(request):
 
 	for tweet in tweets:
 		tweetObj = Tweet(text = tweet.text)
+		
+		x[count] = tweet.text
+		count = count+1
 		print(tweet.text)
 		tweetObj.save()
 
-	return HttpResponse(status=200)
+	#return HttpResponse(status=200)
+
+
+
+	return render(request, 'tweets/show.html', x)
 
 	#Oaa8AFy1BrFEpN217EmtNhj8D
 	#fDGc7WPcSwRQgRHCNbyA59fxk7ic9JNJpCK1c3ATg1fIyu6FJW
