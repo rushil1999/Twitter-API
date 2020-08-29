@@ -1,9 +1,37 @@
 <html>
 	<body>
 		<ul>
-		{% for key, value in x.items %}
-		    <li><a href="{{key}}">{{value}}</a></li>
-		{% endfor %}
+		</ul>
+				{% for item in dictionary %}
+					{% for key, value in item.items %}
+				    		<li>{{value}}</li>
+					{% endfor %}
+				{% endfor %}
 		</ul>
 	</body>
 </html>
+
+
+<!-- <html>
+	<body>
+		<ul>
+			{% for item in dictionary %}
+				<ui>
+				 	{% for key,value in item.items %}{{ value }}{% endfor %}
+				</ui> 
+			{% endfor %}
+		</ul>
+	</body>
+</html> -->
+
+<!-- <html>
+	<body>
+		<ul>
+			{% for abc in list %}
+				{% for key, value in abc.items %}
+					 <li><a href="{{key}}">{{value}}</a></li>
+					 {% endfor %}
+			{% endfor %}
+		</ul>
+	</body>
+</html> -->
